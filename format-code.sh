@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 mkdir -p .cache
 cd .cache
 if [ ! -f google-java-format-1.5-all-deps.jar ]
