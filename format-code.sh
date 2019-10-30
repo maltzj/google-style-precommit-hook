@@ -1,13 +1,17 @@
-#!/usr/bin/env sh
-mkdir -p .cache
-cd .cache
-if [ ! -f google-java-format-1.6-all-deps.jar ]
-then
-    curl -LJO "https://github.com/google/google-java-format/releases/download/google-java-format-1.6/google-java-format-1.6-all-deps.jar"
-    chmod 755 google-java-format-1.6-all-deps.jar
-fi
-cd ..
+#!/usr/bin/env bash
 
-changed_java_files=$(git diff --cached --name-only --diff-filter=ACMR | grep ".*java$" )
-echo $changed_java_files
-java -jar .cache/google-java-format-1.6-all-deps.jar --replace $changed_java_files
+JAR_VERSION="1.7"
+JAR_FILE="google-java-format-${JAR_VERSION}-all-deps.jar"
+JAR_URL="https://github.com/google/google-java-format/releases/download/google-java-format-${JAR_VERSION}/${JAR_FILE}"
+
+mkdir -p .cache
+
+if [ ! -f "${JAR_FILE}" ]
+then
+    curl -sLJ "${JAR_URL}" -o "${JAR_FILE}"
+    chmod 755 "${JAR_FILE}"
+fi
+
+JAVA_DIFF=$(git diff --cached --name-only --diff-filter=ACMR | grep ".*java$" )
+echo "${JAVA_DIFF}"
+java -jar .cache/"${JAR_FILE}" --replace "${JAVA_DIFF}"
