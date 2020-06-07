@@ -9,6 +9,7 @@ repos:
   sha: b7e9e7fcba4a5aea463e72fe9964c14877bd8130
     hooks:
       - id: google-style-java
+        files: \.java$
 ```
 
 *Note*: this file stores Google's code style formatter jar in a `.cache/`
