@@ -1,2 +1,4 @@
 .cache
 *.swp
+.idea
+*.iml
