@@ -4,4 +4,4 @@
     entry: ./format-code.sh
     language: script
     files: \.java$ # We don't technically need this, as the script will filter for us, but this will allow the hook to be skipped if no Java is changed.
-
+    require_serial: true
