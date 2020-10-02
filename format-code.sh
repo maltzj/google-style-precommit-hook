@@ -1,6 +1,6 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
-changed_java_files="$@"
+changed_java_files=("$@")
 
 VERSION=1.9
 NAME=google-java-format-$VERSION
@@ -15,4 +15,4 @@ then
 fi
 cd ..
 
-java -jar .cache/$CMD --replace $changed_java_files
+java -jar .cache/$CMD --replace "${changed_java_files[@]}"
