@@ -15,8 +15,7 @@ show_help() {
   echo "Usage: ./format-code.sh [OPTIONS]"
   echo 
   echo "Options:"
-  echo "--version string       The version of the google java style formatter being used by the script. By default, the script uses the 1.7 version, " \ 
-       "to check the available versions, please, visit the google formatter repository at https://github.com/google/google-java-format"
+  echo "--version string    The version of the google java style formatter being used by the script. By default, the script uses the 1.7 version."
   echo "  Example: ./format-code.sh --version 1.7   # The script will execute using the 1.7 version of the formatter"
   echo "           ./format-code.sh --version 1.10  # The script will execute using the 1.10 version of the formatter"
   echo "--jvm-flags string  The flags to be defined when executing the JVM in the script. By default no flags are defined. "
