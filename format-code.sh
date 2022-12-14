@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 mkdir -p .cache
 cd .cache
-if [ ! -f google-java-format-1.13.0-all-deps.jar ]
+if [ ! -f google-java-format-1.14.0-all-deps.jar ]
 then
     curl -LJO "https://github.com/google/google-java-format/releases/download/v1.14.0/google-java-format-1.14.0-all-deps.jar"
     chmod 755 google-java-format-1.14.0-all-deps.jar
@@ -19,4 +19,4 @@ java \
 --add-exports jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED \
 --add-opens jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED \
 --add-opens jdk.compiler/com.sun.tools.javac.comp=ALL-UNNAMED \
--jar .cache/google-java-format-1.13.0-all-deps.jar --replace $@
+-jar .cache/google-java-format-1.14.0-all-deps.jar --replace $@
