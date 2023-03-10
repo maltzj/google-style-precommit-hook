@@ -1,3 +1,5 @@
+_This project is not actively maintained anymore; https://github.com/macisamuele/language-formatters-pre-commit-hooks is aa possible alternative._
+
 A handy [pre-commit](http://pre-commit.com/) hook which will run Google's java
 code style formatter for you on your code!
 
