@@ -5,8 +5,8 @@ Usage:
 
 ```
 repos:
-- repo: https://github.com/maltzj/google-style-precommit-hook
-  rev: 95c2f5632710e095220e22cc1a4e1a1451abf75f
+- repo: https://github.com/0x08/google-style-precommit-hook
+  rev: 8a61d5fda43e9a1ce12e46aa073380e29b4ec340
   hooks:
     - id: google-style-java
 ```
